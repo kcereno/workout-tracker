@@ -1,4 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,64 +8,41 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+const DUMMY_WORKOUTS = [
+  'Lower Body 1',
+  'Lower Body 2',
+  'Upper Body 1',
+  'Upper Body 2',
+];
+
 export default function Index() {
   return (
-    <div className="font-sans bg-gray-200 h-screen pb-16 overflow-y-auto text-black">
-      <div className="h-10 bg-gray-400 fixed w-full">TOp Bat</div>
-      <div className=" bg-red-300 overflow-auto h-full mt-10">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolorem
-        aliquam nemo eum impedit cupiditate praesentium numquam beatae, iusto
-        aliquid totam possimus! Deserunt cupiditate eum veniam atque et facilis,
-        totam consectetur qui voluptatem tenetur culpa, deleniti eaque esse,
-        recusandae similique aperiam explicabo maxime optio? Blanditiis et ipsam
-        doloribus voluptatum itaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Hic dolorem aliquam nemo eum impedit cupiditate
-        praesentium numquam beatae, iusto aliquid totam possimus! Deserunt
-        cupiditate eum veniam atque et facilis, totam consectetur qui voluptatem
-        tenetur culpa, deleniti eaque esse, recusandae similique aperiam
-        explicabo maxime optio? Blanditiis et ipsam doloribus voluptatum itaque.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolorem
-        aliquam nemo eum impedit cupiditate praesentium numquam beatae, iusto
-        aliquid totam possimus! Deserunt cupiditate eum veniam atque et facilis,
-        totam consectetur qui voluptatem tenetur culpa, deleniti eaque esse,
-        recusandae similique aperiam explicabo maxime optio? Blanditiis et ipsam
-        doloribus voluptatum itaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Hic dolorem aliquam nemo eum impedit cupiditate
-        praesentium numquam beatae, iusto aliquid totam possimus! Deserunt
-        cupiditate eum veniam atque et facilis, totam consectetur qui voluptatem
-        tenetur culpa, deleniti eaque esse, recusandae similique aperiam
-        explicabo maxime optio? Blanditiis et ipsam doloribus voluptatum itaque.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolorem
-        aliquam nemo eum impedit cupiditate praesentium numquam beatae, iusto
-        aliquid totam possimus! Deserunt cupiditate eum veniam atque et facilis,
-        totam consectetur qui voluptatem tenetur culpa, deleniti eaque esse,
-        recusandae similique aperiam explicabo maxime optio? Blanditiis et ipsam
-        doloribus voluptatum itaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Hic dolorem aliquam nemo eum impedit cupiditate
-        praesentium numquam beatae, iusto aliquid totam possimus! Deserunt
-        cupiditate eum veniam atque et facilis, totam consectetur qui voluptatem
-        tenetur culpa, deleniti eaque esse, recusandae similique aperiam
-        explicabo maxime optio? Blanditiis et ipsam doloribus voluptatum itaque.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolorem
-        aliquam nemo eum impedit cupiditate praesentium numquam beatae, iusto
-        aliquid totam possimus! Deserunt cupiditate eum veniam atque et facilis,
-        totam consectetur qui voluptatem tenetur culpa, deleniti eaque esse,
-        recusandae similique aperiam explicabo maxime optio? Blanditiis et ipsam
-        doloribus voluptatum itaque. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Hic dolorem aliquam nemo eum impedit cupiditate
-        praesentium numquam beatae, iusto aliquid totam possimus! Deserunt
-        cupiditate eum veniam atque et facilis, totam consectetur qui voluptatem
-        tenetur culpa, deleniti eaque esse, recusandae similique aperiam
-        explicabo maxime optio? Blanditiis et ipsam doloribus voluptatum itaque.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolorem
-        aliquam nemo eum impedit cupiditate praesentium numquam beatae, iusto
-        aliquid totam possimus! Deserunt cupiditate eum veniam atque et facilis,
-        totam consectetur qui voluptatem tenetur culpa, deleniti eaque esse,
-        recusandae similique aperiam explicabo maxime optio? Blanditiis et ipsam
-        doloribus voluptatum itaque.
+    <div className="font-sans bg-gray-100 h-screen pb-16 overflow-y-auto text-black">
+      {/* Top Bar */}
+      <div className="h-12 bg-gray-200 fixed w-full grid grid-cols-3 px-4 content-center  border-b-[1px] border-b-gray-300">
+        <div className=""></div>
+        <div className="justify-self-center">My Workouts</div>
+        <div className="justify-self-end">Edit</div>
       </div>
+      {/* Content */}
+      <div className="overflow-y-auto h-full mt-12 px-4">
+        <div className="flex flex-col">
+          {DUMMY_WORKOUTS.map((workout) => {
+            return (
+              <div
+                key={workout}
+                className="py-2 border-b-[1px] flex justify-between"
+              >
+                <div className=""> {workout}</div>
+                <MdKeyboardArrowRight className="size-6" />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* Add Workout Button */}
       <div className="fixed bottom-20 left-0 right-0 flex justify-center">
-        <button className="btn btn-primary ">Test</button>
+        <button className="btn btn-primary btn-wide ">Add Workout</button>
       </div>
     </div>
   );
