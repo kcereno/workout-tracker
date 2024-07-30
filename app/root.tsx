@@ -36,10 +36,5 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <div className="bg-gray-800 min-h-lvh">
-      <Outlet />
-      <BottomNavigation />
-    </div>
-  );
+  return <Outlet />;
 }
