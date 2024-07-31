@@ -1,0 +1,86 @@
+{
+  "Chest": {
+    "Bench Press": {
+      "primary": ["Pectoralis Major"],
+      "secondary": ["Triceps", "Deltoids"]
+    },
+    "Incline Bench Press": {
+      "primary": ["Pectoralis Major"],
+      "secondary": ["Triceps", "Deltoids"]
+    },
+    "Chest Fly": {
+      "primary": ["Pectoralis Major"],
+      "secondary": ["Deltoids"]
+    }
+  },
+  "Back": {
+    "Pull-Up": {
+      "primary": ["Latissimus Dorsi"],
+      "secondary": ["Biceps", "Rhomboids"]
+    },
+    "Deadlift": {
+      "primary": ["Erector Spinae"],
+      "secondary": ["Glutes", "Hamstrings", "Lats"]
+    },
+    "Bent Over Row": {
+      "primary": ["Latissimus Dorsi"],
+      "secondary": ["Biceps", "Rhomboids", "Trapezius"]
+    }
+  },
+  "Legs": {
+    "Squat": {
+      "primary": ["Quadriceps"],
+      "secondary": ["Glutes", "Hamstrings"]
+    },
+    "Deadlift": {
+      "primary": ["Hamstrings"],
+      "secondary": ["Glutes", "Lower Back"]
+    },
+    "Leg Press": {
+      "primary": ["Quadriceps"],
+      "secondary": ["Glutes", "Hamstrings"]
+    }
+  },
+  "Shoulders": {
+    "Shoulder Press": {
+      "primary": ["Deltoids"],
+      "secondary": ["Triceps"]
+    },
+    "Lateral Raise": {
+      "primary": ["Deltoids"],
+      "secondary": []
+    },
+    "Rear Delt Fly": {
+      "primary": ["Deltoids"],
+      "secondary": ["Trapezius"]
+    }
+  },
+  "Arms": {
+    "Bicep Curl": {
+      "primary": ["Biceps"],
+      "secondary": []
+    },
+    "Tricep Extension": {
+      "primary": ["Triceps"],
+      "secondary": []
+    },
+    "Hammer Curl": {
+      "primary": ["Biceps"],
+      "secondary": ["Brachialis", "Brachioradialis"]
+    }
+  },
+  "Core": {
+    "Plank": {
+      "primary": ["Rectus Abdominis"],
+      "secondary": ["Transverse Abdominis", "Obliques"]
+    },
+    "Russian Twist": {
+      "primary": ["Obliques"],
+      "secondary": ["Rectus Abdominis"]
+    },
+    "Leg Raise": {
+      "primary": ["Rectus Abdominis"],
+      "secondary": ["Hip Flexors"]
+    }
+  }
+}

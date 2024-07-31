@@ -1,12 +1,13 @@
 import { IoBarbell } from 'react-icons/io5';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+type PrimaryMuscleListProps = {
+  data: string[];
+};
 
-const exerciseCategories = ['Abs', 'Chest', 'Back', 'Arm'];
-
-const ExerciseCategoryList = () => {
+const MuscleGroupList = ({ data = [] }: PrimaryMuscleListProps) => {
   return (
     <div className="flex flex-col gap-4">
-      {exerciseCategories.map((exercise) => (
+      {data.map((exercise) => (
         <div
           key={exercise}
           className="flex border-b-[1px] border-b-gray-300 py-2 justify-between"
@@ -32,4 +33,4 @@ const ExerciseCategoryList = () => {
   );
 };
 
-export default ExerciseCategoryList;
+export default MuscleGroupList;
