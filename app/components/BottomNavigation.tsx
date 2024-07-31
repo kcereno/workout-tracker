@@ -1,11 +1,5 @@
-import {
-  Link,
-  useLocation,
-  useNavigate,
-  useNavigation,
-  useParams,
-} from '@remix-run/react';
-import { useState } from 'react';
+import { Link, useLocation } from '@remix-run/react';
+
 import { IoBarbell, IoClipboard } from 'react-icons/io5';
 
 export type Page = 'exercises' | 'workouts';
