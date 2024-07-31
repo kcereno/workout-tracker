@@ -23,7 +23,7 @@ function BottomNavigation() {
   ];
 
   return (
-    <nav className="bg-gray-400 fixed bottom-0 h-20 w-full max-w-md">
+    <nav className="bg-gray-400 fixed bottom-0 h-20 w-full max-w-md left-0 right-0 mx-auto">
       <div className="bg-gray-300 grid grid-cols-2 h-full ">
         {buttons.map((button) => (
           <Link

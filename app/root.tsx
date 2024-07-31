@@ -8,7 +8,6 @@ import {
 import type { LinksFunction } from '@remix-run/node';
 
 import stylesheet from '~/tailwind.css?url';
-import BottomNavigation from './components/BottomNavigation';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -36,5 +35,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="max-w-md w-full min-h-dvh bg-gray-200 flex flex-col mx-auto text-black">
+      <Outlet />
+    </div>
+  );
 }
