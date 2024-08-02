@@ -6,6 +6,7 @@ export type Page = 'exercises' | 'workouts';
 
 function BottomNavigation() {
   const location = useLocation();
+  console.log('BottomNavigation ~ location:', location);
 
   const pathname = location.pathname;
 
@@ -30,7 +31,7 @@ function BottomNavigation() {
             to={button.url}
             key={button.name}
             className={`flex flex-col justify-center items-center ${
-              pathname === button.url ? 'bg-gray-400 rounded-lg' : null
+              pathname.includes(button.url) ? 'bg-gray-400 rounded-lg' : null
             }`}
           >
             {button.icon}
