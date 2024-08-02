@@ -1,24 +1,16 @@
 import BottomNavigation from '~/components/BottomNavigation';
 import SearchBar from '~/components/inputs/SearchBar';
 ('react-icons/md');
-
-import { promises as fs } from 'fs';
 import { json, useLoaderData } from '@remix-run/react';
-
-import { Exercises } from '~/types/exercises';
-import { extractMuscleGroups } from '~/helpers/exercises';
+import {
+  extractMuscleGroups,
+  fetchExerciseJsonData,
+} from '~/helpers/exercises';
 import MuscleGroupList from '~/components/MuscleGroupList';
 
 export const loader = async () => {
-  const jsonDirectory = 'app/json';
-  const fileContents = await fs.readFile(
-    jsonDirectory + '/exercises.json',
-    'utf-8'
-  );
-
-  const exercises = JSON.parse(fileContents) as Exercises;
-
-  const muscleGroups = extractMuscleGroups(exercises);
+  const exerciseData = await fetchExerciseJsonData();
+  const muscleGroups = extractMuscleGroups(exerciseData);
 
   return json({
     muscleGroups,
@@ -35,10 +27,8 @@ const ExercisesPage = () => {
           <SearchBar />
         </div>
       </header>
-      <main className="bg-gray-200 mt-16 flex-1 overflow-y-auto mb-20 px-4">
-        <div className="flex flex-col gap-4">
-          <MuscleGroupList data={muscleGroups} />
-        </div>
+      <main className="mt-16 flex-1 overflow-y-auto mb-20 px-4">
+        <MuscleGroupList data={muscleGroups} />
       </main>
 
       <button className="fixed bottom-24 btn left-0 right-0 mx-auto max-w-md btn-wide">
