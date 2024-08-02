@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import { IoBarbell } from 'react-icons/io5';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 type PrimaryMuscleListProps = {
@@ -8,7 +9,8 @@ const MuscleGroupList = ({ data = [] }: PrimaryMuscleListProps) => {
   return (
     <div className="flex flex-col gap-4">
       {data.map((exercise) => (
-        <div
+        <Link
+          to={exercise.toLocaleLowerCase()}
           key={exercise}
           className="flex border-b-[1px] border-b-gray-300 py-2 justify-between"
         >
@@ -21,7 +23,7 @@ const MuscleGroupList = ({ data = [] }: PrimaryMuscleListProps) => {
           <span className="">
             <MdKeyboardArrowRight className="size-6" />
           </span>
-        </div>
+        </Link>
       ))}
       <div className="flex border-b-[1px] border-b-gray-300 py-2 justify-between">
         <span>All Exercises</span>
