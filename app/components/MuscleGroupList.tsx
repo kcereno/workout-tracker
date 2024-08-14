@@ -1,6 +1,7 @@
 import { Link } from '@remix-run/react';
 import { IoBarbell } from 'react-icons/io5';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import { capitalizeFirstLetter } from '~/utils/transformers';
 type PrimaryMuscleListProps = {
   data: string[];
 };
@@ -18,7 +19,7 @@ const MuscleGroupList = ({ data = [] }: PrimaryMuscleListProps) => {
             <span>
               <IoBarbell className="size-6" />
             </span>
-            <div className="">{exercise}</div>
+            <div className="">{capitalizeFirstLetter(exercise)}</div>
           </span>
           <span className="">
             <MdKeyboardArrowRight className="size-6" />
@@ -27,9 +28,7 @@ const MuscleGroupList = ({ data = [] }: PrimaryMuscleListProps) => {
       ))}
       <div className="flex border-b-[1px] border-b-gray-300 py-2 justify-between">
         <span>All Exercises</span>
-        <span className="">
-          <MdKeyboardArrowRight className="size-6" />
-        </span>
+        <MdKeyboardArrowRight className="size-6" />
       </div>
     </div>
   );

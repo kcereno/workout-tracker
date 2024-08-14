@@ -6,8 +6,6 @@ export type Page = 'exercises' | 'workouts';
 
 function BottomNavigation() {
   const location = useLocation();
-  console.log('BottomNavigation ~ location:', location);
-
   const pathname = location.pathname;
 
   const buttons = [

@@ -1,86 +1,86 @@
 {
-  "Chest": {
-    "Bench Press": {
-      "primary": ["Pectoralis Major"],
-      "secondary": ["Triceps", "Deltoids"]
+  "chest": {
+    "bench_press": {
+      "primary": ["pectoralis_major"],
+      "secondary": ["triceps", "deltoids"]
     },
-    "Incline Bench Press": {
-      "primary": ["Pectoralis Major"],
-      "secondary": ["Triceps", "Deltoids"]
+    "incline_bench_press": {
+      "primary": ["pectoralis_major"],
+      "secondary": ["triceps", "deltoids"]
     },
-    "Chest Fly": {
-      "primary": ["Pectoralis Major"],
-      "secondary": ["Deltoids"]
+    "chest_fly": {
+      "primary": ["pectoralis_major"],
+      "secondary": ["deltoids"]
     }
   },
-  "Back": {
-    "Pull-Up": {
-      "primary": ["Latissimus Dorsi"],
-      "secondary": ["Biceps", "Rhomboids"]
+  "back": {
+    "pull_up": {
+      "primary": ["latissimus_dorsi"],
+      "secondary": ["biceps", "rhomboids"]
     },
-    "Deadlift": {
-      "primary": ["Erector Spinae"],
-      "secondary": ["Glutes", "Hamstrings", "Lats"]
+    "deadlift": {
+      "primary": ["erector_spinae"],
+      "secondary": ["glutes", "hamstrings", "lats"]
     },
-    "Bent Over Row": {
-      "primary": ["Latissimus Dorsi"],
-      "secondary": ["Biceps", "Rhomboids", "Trapezius"]
+    "bent_over_row": {
+      "primary": ["latissimus_dorsi"],
+      "secondary": ["biceps", "rhomboids", "trapezius"]
     }
   },
-  "Legs": {
-    "Squat": {
-      "primary": ["Quadriceps"],
-      "secondary": ["Glutes", "Hamstrings"]
+  "legs": {
+    "squat": {
+      "primary": ["quadriceps"],
+      "secondary": ["glutes", "hamstrings"]
     },
-    "Deadlift": {
-      "primary": ["Hamstrings"],
-      "secondary": ["Glutes", "Lower Back"]
+    "deadlift": {
+      "primary": ["hamstrings"],
+      "secondary": ["glutes", "lower_back"]
     },
-    "Leg Press": {
-      "primary": ["Quadriceps"],
-      "secondary": ["Glutes", "Hamstrings"]
+    "leg_press": {
+      "primary": ["quadriceps"],
+      "secondary": ["glutes", "hamstrings"]
     }
   },
-  "Shoulders": {
-    "Shoulder Press": {
-      "primary": ["Deltoids"],
-      "secondary": ["Triceps"]
+  "shoulders": {
+    "shoulder_press": {
+      "primary": ["deltoids"],
+      "secondary": ["triceps"]
     },
-    "Lateral Raise": {
-      "primary": ["Deltoids"],
+    "lateral_raise": {
+      "primary": ["deltoids"],
       "secondary": []
     },
-    "Rear Delt Fly": {
-      "primary": ["Deltoids"],
-      "secondary": ["Trapezius"]
+    "rear_delt_fly": {
+      "primary": ["deltoids"],
+      "secondary": ["trapezius"]
     }
   },
-  "Arms": {
-    "Bicep Curl": {
-      "primary": ["Biceps"],
+  "arms": {
+    "bicep_curl": {
+      "primary": ["biceps"],
       "secondary": []
     },
-    "Tricep Extension": {
-      "primary": ["Triceps"],
+    "tricep_extension": {
+      "primary": ["triceps"],
       "secondary": []
     },
-    "Hammer Curl": {
-      "primary": ["Biceps"],
-      "secondary": ["Brachialis", "Brachioradialis"]
+    "hammer_curl": {
+      "primary": ["biceps"],
+      "secondary": ["brachialis", "brachioradialis"]
     }
   },
-  "Core": {
-    "Plank": {
-      "primary": ["Rectus Abdominis"],
-      "secondary": ["Transverse Abdominis", "Obliques"]
+  "core": {
+    "plank": {
+      "primary": ["rectus_abdominis"],
+      "secondary": ["transverse_abdominis", "obliques"]
     },
-    "Russian Twist": {
-      "primary": ["Obliques"],
-      "secondary": ["Rectus Abdominis"]
+    "russian_twist": {
+      "primary": ["obliques"],
+      "secondary": ["rectus_abdominis"]
     },
-    "Leg Raise": {
-      "primary": ["Rectus Abdominis"],
-      "secondary": ["Hip Flexors"]
+    "leg_raise": {
+      "primary": ["rectus_abdominis"],
+      "secondary": ["hip_flexors"]
     }
   }
 }
