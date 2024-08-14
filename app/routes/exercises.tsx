@@ -7,6 +7,7 @@ import {
   fetchExerciseJsonData,
 } from '~/helpers/exercises';
 import MuscleGroupList from '~/components/MuscleGroupList';
+import { useRef } from 'react';
 
 export const loader = async () => {
   const exerciseData = await fetchExerciseJsonData();
@@ -20,6 +21,16 @@ export const loader = async () => {
 const ExercisesPage = () => {
   const { muscleGroups } = useLoaderData<typeof loader>();
 
+  const showModal = () => {
+    const modal = document.getElementById(
+      'add_exercise_modal'
+    ) as HTMLDialogElement;
+
+    if (modal) {
+      modal.showModal();
+    }
+  };
+
   return (
     <>
       <header className="h-16 fixed bg-gray-300 w-full max-w-md left-0 right-0 mx-auto">
@@ -31,10 +42,33 @@ const ExercisesPage = () => {
         <MuscleGroupList data={muscleGroups} />
       </main>
 
-      <button className="fixed bottom-24 btn left-0 right-0 mx-auto max-w-md btn-wide">
+      <button
+        className="fixed bottom-24 btn left-0 right-0 mx-auto max-w-md btn-wide"
+        onClick={showModal}
+      >
         Add Exercise
       </button>
       <BottomNavigation />
+
+      {/* Modal */}
+      <div>
+        <dialog
+          id="add_exercise_modal"
+          className="modal"
+        >
+          <div className="modal-box">
+            <h3 className="text-lg font-bold">Hello!</h3>
+            <p className="py-4">
+              Press ESC key or click the button below to close
+            </p>
+            <div className="modal-action">
+              <form method="dialog">
+                <button className="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </div>
     </>
   );
 };
